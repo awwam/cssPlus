@@ -1,33 +1,41 @@
-<!DOCTYPE html>
-
+<!doctype html>
 <html>
-
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>CSS Flexbox</title>
-    <link href="sources/scaffolding/release/flex_layout-0.1.css" rel="stylesheet">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>cssPlus</title>
+
+
+    <link rel="stylesheet" href="sources/scaffolding/release/flex_layout-0.1.css">
+    <link rel="stylesheet" href="externals/js/jquery.snippet.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <script src="externals/js/jquery-2.1.1.min.js"></script>
+    <script src="externals/js/underscore.js"></script>
+    <script src="externals/js/jquery.snippet.js"></script>
 
 </head>
+<body>
 
 <style>
-    .COL, .ROW, .ROW-FLEX, .COL-FLEX {
+
+    /* these classes just to show you all the containers */
+
+    .COL, .ROW, .ROW-FLEX, .COL-FLEX, .FITTER {
         box-shadow: inset 0px 0px 3px 3px rgba(0, 0, 0, 0.1);
     }
+
+    .sh_sourceCode{
+        font-family: 9px
+    }
+
 </style>
 
 
-<body>
 
-
-<div class="EXTENDER">
-
-    <div class="PADDER35">
-        <div class="COLS">
-            <div class="COL ROWS CENTER" style="width:80px">
-                <div class="ROW">
-                    <small>centered row</small>
-                </div>
-            </div>
+<div style="width: 90%; margin: 0px auto">
+    <pre class="htmlCode">
+        <code>
             <div class="COL-FLEX ROWS">
                 <div class="ROW COLS CENTER" style="height:50px">
                     <div class="COL" style="width:70px">
@@ -55,105 +63,77 @@
                 <div class="ROW-FLEX COLS">
                     <div class="COL" style="width:80px">
                         <div class="EXTENDER">
-
                             <div class="ROWS CENTER END">
                                 <div class="ROW">
                                     <small>bottom row</small>
                                 </div>
                             </div>
-
-
                         </div>
                     </div>
                     <div class="COL-FLEX">
-
                         <div class="EXTENDER">
-
                             <div class="PADDER-CENTER">
-                                <div style="border:solid 1px; width:80px; height:100px"><small>centered element</small></div>
+                                <div style="border:solid 1px; width:80px; height:100px">
+                                    <small>centered element</small>
+                                </div>
                             </div>
-
-
                         </div>
                     </div>
                     <div class="COL" style="width:80px">
                         <div class="EXTENDER">
-
                             <div class="ROWS CENTER START">
                                 <div class="ROW">
                                     <small>top row</small>
                                 </div>
                             </div>
-
-
                         </div>
                     </div>
                 </div>
                 <div class="ROW COLS END" style="height:70px">
                     <div class="COL" style="width:50px">
-
                     </div>
                     <div class="COL" style="width:50px"></div>
                     <div class="COL" style="width:50px"></div>
                 </div>
             </div>
-            <div class="COL ROWS CENTER" style="width:200px">
-
-                <div class="ROW COLS CENTER" style="height:70px">
-                    <div class="COL" style="width:20px"></div>
-                    <div class="COL" style="width:20px"></div>
-                    <div class="COL" style="width:20px"></div>
-                </div>
-                <div class="ROW COLS" style="height:70px">
-                    <div class="COL-FLEX">
-
-                        <div class="EXTENDER">
-
-                        </div>
-
-                    </div>
-                    <div class="COL-FLEX">
-                        <div class="EXTENDER">
-                            <div></div>
-                            <div></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="COL ROWS" style="width:200px">
-                <div class="ROW">
-
-                </div>
-                <div class="ROW-FLEX"></div>
-                <div class="ROW COLS" style="height:300px">
-                    <div class="COL-FLEX ROWS">
-                        <div class="ROW" style="height:30px"></div>
-                        <div class="ROW-FLEX"></div>
-                        <div class="ROW" style="height:30px"></div>
-                    </div>
-                    <div class="COL" style="width:40px">
-                    </div>
-                    <div class="COL ROWS END" style="width:80px">
-                        <div class="ROW" style="height:20px"></div>
-                        <div class="ROW" style="height:20px"></div>
-                        <div class="ROW" style="height:20px"></div>
-                    </div>
-                </div>
-            </div>
-
-
-        </div>
-    </div>
+        </code>
+    </pre>
 </div>
-
-<!--
-
-
-
-
--->
 
 
 </body>
-
 </html>
+
+
+<script>
+
+    $(document).ready(function () {
+
+
+        function escapeHTML(string) {
+            var pre = document.createElement('pre');
+            var text = document.createTextNode(string);
+            pre.appendChild(text);
+            return pre.innerHTML;
+        }
+
+
+        $("pre.htmlCode").each(function () {
+            var code = $(this).find("code").html();
+            var $code = $(this).find("code");
+            var escaped = escapeHTML(code);
+
+            //alert(escaped);
+
+            $code.html(escaped);
+            $(this).snippet("html", {style: "dull"});
+            $(this).find("li").each(function () {
+                if ($(this).find("code").html() == "" || $(this).find("code").text() == "")
+                    $(this).remove();
+            });
+        })
+
+    });
+
+
+</script>
