@@ -1,0 +1,70 @@
+// DEFAULT 769px - 1440px
+.screen-s,.screen-l,.screen-xl,.screen-xxl{
+  display: none;
+}
+
+.screen{
+  display: block;
+}
+
+
+
+// SMALL 0px - 768px
+@media only screen and (max-width: @screen-s) {
+  .screen,.screen-l,.screen-xl,.screen-xxl{
+    display: none;
+  }
+
+  .screen-s{
+    display: block;
+  }
+}
+
+
+
+// LARGE 1441px - 1920px
+@media only screen and (min-width: @screen-l) {
+
+  .screen,.screen-s,.screen-xl,.screen-xxl{
+    display: none;
+  }
+
+  .screen-l{
+    display: block;
+  }
+}
+
+
+
+
+// XLARGE 1921px - 2549px
+@media only screen and (min-width: @screen-xl) {
+
+  .screen,.screen-s,.screen-l,.screen-xxl{
+    display: none;
+  }
+
+  .screen-xl{
+    display: block;
+  }
+}
+
+
+
+// XXLARGE 2551px and higher
+@media only screen and (min-width: @screen-xxl) {
+
+  .screen,.screen-s,.screen-l,.screen-xl{
+    display: none;
+  }
+
+  .screen-xxl{
+    display: block;
+  }
+}
+
+
+
+
+
+
