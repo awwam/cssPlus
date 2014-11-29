@@ -1,0 +1,47 @@
+
+
+.button{
+  .ROW-FLEX();
+  .icon{
+    .icon(@app-controller-icon-size);
+  }
+
+  @media (max-width: @screen-s) {
+    .COL-FLEX();
+    line-height: 18px;
+
+    .icon {
+      .icon(@app-controller-icon-size-small-screen);
+    }
+
+    .label{
+      font-size: 0.8em;
+    }
+
+  }
+
+  @media (min-width: @screen-l) {
+    .icon {
+      .icon(@app-controller-icon-size-large-screen);
+    }
+
+  }
+
+  @media (min-width: @screen-xl) {
+
+    .icon {
+      .icon(@app-controller-icon-size-extralarge-screen);
+    }
+
+  }
+}
+
+
+
+
+
+
+
+
+
+

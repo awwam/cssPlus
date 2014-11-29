@@ -1,112 +1,71 @@
 
-
-
-
-
-/*
 .app{
   .EXTENDER();
-}
 
-.items{
-  .COLS();
+  .items{
+    .COLS();
 
-  @media (min-width: @screen-tablet) {
-    .ROWS();
-  }
 
-  .controller{
-
-    .COL;
-    .ROWS;
-    width: 110px;
-    background-color: #f1f1f1;
-    border-right: solid 1px #d2d2d2;
-    .button{
-      .ROW-FLEX;
+    @media (max-width: @screen-s) {
+      .ROWS();
     }
 
-    @media (min-width: @screen-tablet) {
-      .ROW;
-      .COLS;
-      width: auto;
-      height: 50px;
-      border-bottom: solid 1px #d2d2d2;
-
-      .button{
-        .COL-FLEX;
-      }
+    .controller{
+      .controller;
     }
 
 
-    @media (min-width: @screen-tablet) {
-      .ROW;
-      .COLS;
-      width: auto;
-      height: 50px;
-      border-bottom: solid 1px #d2d2d2;
+    .content{
+      .COL-FLEX();
+      .ROWS();
 
-      .button{
-        .COL-FLEX;
-      }
-    }
-
-  }
-
-
-  .content{
-    .COL-FLEX;
-    .ROWS;
-
-    @media (min-width: @screen-tablet) {
-      .ROW-FLEX;
-    }
-
-    .header{
-      .ROW;
-      .COLS;
-      .END;
-      background-color: #f1f1f1;
-      border-bottom: solid 1px #d2d2d2;
-      height: 35px;
-
-      @media (min-width: @screen-tablet) {
-        border-top: solid 1px #d2d2d2;
-        border-bottom: none;
-        -webkit-box-ordinal-group: 2;
-        -moz-box-ordinal-group: 2;
-        -webkit-order: 1;
-        -ms-flex-order: 1;
-        order: 1;
-        -webkit-box-flex: 0;
-        -moz-box-flex: 0;
-        -webkit-flex: 0 1 auto;
-        -ms-flex: 0 1 auto;
-        flex: 0 1 auto;
-        -webkit-align-self: auto;
-        -ms-flex-item-align: auto;
-        align-self: auto;
+      @media (max-width: @screen-s) {
+        .ROW-FLEX();
       }
 
-    }
+      .header{
+        .ROW;
+        .COLS;
+        .END;
+        background-color: #f1f1f1;
+        border-bottom: solid 1px #d2d2d2;
+        height: 35px;
 
-    .content:first-child{
+        @media (max-width: @screen-s) {
+          border-top: solid 1px #d2d2d2;
+          border-bottom: none;
+          -webkit-box-ordinal-group: 2;
+          -moz-box-ordinal-group: 2;
+          -webkit-order: 1;
+          -ms-flex-order: 1;
+          order: 1;
+          -webkit-box-flex: 0;
+          -moz-box-flex: 0;
+          -webkit-flex: 0 1 auto;
+          -ms-flex: 0 1 auto;
+          flex: 0 1 auto;
+          -webkit-align-self: auto;
+          -ms-flex-item-align: auto;
+          align-self: auto;
+        }
 
-    }
+      }
+
+      .content:first-child{
+
+      }
 
 
 
-    .appContent{
-      .ROW-FLEX;
+      .appContent{
+        .ROW-FLEX();
+      }
+
     }
 
   }
 
 }
-
-
-*/
-
 
 
 

@@ -1,70 +1,70 @@
+/*
+
+0-768 : small screen (MOBILE)
+.screen-s = show only on mobile device
+.screen-s-hidden = hide only on mobile device
+
+769-1440 : standard screen (TABLET-DESKTOP)
+.screen = show only on tablet/desktop
+.screen-hidden = hide only on tablet/desktop
+
+1441-1920 : large screen (DESKTOP)
+.screen-l = show only on large desktop
+.screen-l-hidden = hide only on large desktop
+
+1921-2550 : extra large screen (DESKTOP)
+.screen-xl = show only on extra large desktop
+.screen-xl-hidden = hide only on exrta large desktop
+
+>2550 : extra extra large screen (DESKTOP)
+.screen-xxl = show only on extra extra large desktop
+.screen-xxl-hidden = hide only on extra extra large desktop
+
+
+*/
+
+
+
 // DEFAULT 769px - 1440px
 .screen-s,.screen-l,.screen-xl,.screen-xxl{
   display: none;
 }
 
-.screen{
-  display: block;
-}
-
+.screen{display: block;}
+.screen-hidden{display:none;}
 
 
 // SMALL 0px - 768px
 @media only screen and (max-width: @screen-s) {
-  .screen,.screen-l,.screen-xl,.screen-xxl{
-    display: none;
-  }
-
-  .screen-s{
-    display: block;
-  }
+  .screen,.screen-l,.screen-xl,.screen-xxl{display: none;}
+  .screen-s-hidden{display:none;}
+  .screen-hidden{display:block;}
+  .screen-s{display: block;}
 }
-
 
 
 // LARGE 1441px - 1920px
 @media only screen and (min-width: @screen-l) {
-
-  .screen,.screen-s,.screen-xl,.screen-xxl{
-    display: none;
-  }
-
-  .screen-l{
-    display: block;
-  }
+  .screen,.screen-s,.screen-xl,.screen-xxl{display: none;}
+  .screen-l-hidden{display:none;}
+  .screen-hidden{display:block;}
+  .screen-l{display: block;}
 }
-
-
 
 
 // XLARGE 1921px - 2549px
 @media only screen and (min-width: @screen-xl) {
-
-  .screen,.screen-s,.screen-l,.screen-xxl{
-    display: none;
-  }
-
-  .screen-xl{
-    display: block;
-  }
+  .screen,.screen-s,.screen-l,.screen-xxl{display: none;}
+  .screen-xl-hidden{display:none;}
+  .screen-l-hidden{display:block;}
+  .screen-xl{display: block;}
 }
-
 
 
 // XXLARGE 2551px and higher
 @media only screen and (min-width: @screen-xxl) {
-
-  .screen,.screen-s,.screen-l,.screen-xl{
-    display: none;
-  }
-
-  .screen-xxl{
-    display: block;
-  }
+  .screen,.screen-s,.screen-l,.screen-xl{display: none;}
+  .screen-xxl-hidden{display:none;}
+  .screen-xl-hidden{display:block;}
+  .screen-xxl{display: block;}
 }
-
-
-
-
-
-

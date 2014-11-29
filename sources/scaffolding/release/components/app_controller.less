@@ -1,0 +1,49 @@
+.controller {
+  .COL();
+  .ROWS();
+  text-align: center;
+  width: 110px;
+  background-color: #f1f1f1;
+  border-right: solid 1px #d2d2d2;
+  .button {
+    .button;
+  }
+
+  .button:nth-child(1) {
+    color: @first-section-color;
+  }
+
+  .button:nth-child(2) {
+    color: @second-section-color;
+    box-shadow: inset 0px 0px 10px 0px rgba(0,0,0,0.15);
+  }
+
+  .button:nth-child(3) {
+    color: @third-section-color;
+  }
+
+  .button:nth-child(4) {
+    color: @forth-section-color;
+  }
+
+  .button:hover {
+    opacity: 0.6;
+    cursor: pointer;
+  }
+
+  @media (max-width: @screen-s) {
+    .ROW();
+    .COLS();
+    width: auto;
+    height: 60px;
+    border-bottom: solid 1px #d2d2d2;
+
+  }
+}
+
+
+
+
+
+
+
