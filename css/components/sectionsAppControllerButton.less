@@ -1,0 +1,60 @@
+.sectionsAppControllerButton{
+  .ROW-FLEX();
+  .icon{
+    .icon(@app-controller-icon-size);
+  }
+
+  @media @smallmobile, @mobile {
+    .COL-FLEX();
+    line-height: 18px;
+
+    .icon {
+      .icon(@app-controller-icon-size-small-screen);
+    }
+
+    .label{
+      font-size: 0.8em;
+    }
+
+  }
+
+  @media @desktop {
+    .icon {
+      .icon(@app-controller-icon-size-large-screen);
+    }
+
+  }
+
+  @media @wide {
+
+    .icon {
+      .icon(@app-controller-icon-size-extralarge-screen);
+    }
+
+  }
+}
+
+.sectionsAppControllerButton:nth-child(1) {
+  color: @first-section-mainColor;
+}
+
+.sectionsAppControllerButton:nth-child(2) {
+  color: @second-section-mainColor;
+  box-shadow: inset 0px 0px 10px 0px rgba(0,0,0,0.15);
+}
+
+.sectionsAppControllerButton:nth-child(3) {
+  color: @third-section-mainColor;
+}
+
+.sectionsAppControllerButton:nth-child(4) {
+  color: @forth-section-mainColor;
+}
+
+.sectionsAppControllerButton:hover {
+  opacity: 0.6;
+  cursor: pointer;
+}
+
+
+
